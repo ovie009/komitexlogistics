@@ -1,0 +1,940 @@
+.success-notification, .error-notification, .error, .default-expression{
+    width: 40%;
+    min-width: 300px;
+    min-height: 40px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    border: 1px groove seagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    box-shadow: 0 0 5px seagreen;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    font-size: small;
+}
+
+.error-notification, .error{
+    background-color: pink;
+    border: 1px groove tomato;
+    box-shadow: 0 0 5px pink;
+    color: black;
+}
+
+.default-expression{
+    width: calc(100% - 5px);
+    background-color: lightblue;
+    border: 1px groove rgb(7, 66, 124);
+    box-shadow: 0 0 5px rgb(7, 66, 124);
+    box-shadow: none;
+    color: rgb(7, 66, 124);
+    margin: 20px auto;
+    min-width: unset;
+}
+
+.tab-container{
+    width: 40vw;
+    height: 37.5px;
+    margin: 10px auto 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    flex-flow: nowrap;
+    position: relative;
+    width: 40%;
+}
+
+.tab-container button{
+    width: 100px;
+    text-align: center;
+    height: 100%;
+    color: rgb(7, 66, 124);
+    background-color: white;
+    border: none;
+    margin: 0;
+    position: absolute;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    left: 0;
+    bottom: -1.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller;
+    /* position: relative; */
+}
+
+.tab-container button section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 10px;
+}
+
+.waybill-tab-notification{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color: rgb(7, 66, 124);
+    color: white;
+    background-color: white;
+    background-color: red;
+    background-color: crimson;
+    position: absolute;
+    font-size: 0.7em;
+    right: -7.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* right: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#products-tab{
+    border-radius: 15px 15px 0 0;
+    z-index: 3;
+}
+
+#waybill-tab{
+    border-radius: 15px 15px 0 0;
+    left: 85px;
+    z-index: 2;
+    border-bottom: 1px solid lightgray;
+    background-color: rgb(230, 230, 230);
+}
+
+#stock-tab{
+    border-radius: 15px 15px 0 0;
+    left: 170px;
+    z-index: 1;
+    border-bottom: 1px solid lightgray;
+    background-color: rgb(230, 230, 230);
+}
+
+.waybill-page-info h1{
+    color: rgb(7, 66, 124);
+}
+
+.waybill-page-info{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
+.products-div, .waybill-div, .stock-div{
+    display: flex;
+    width: 40vw;
+    min-width: 300px;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 0 5px 5px 5px;
+    /*box-shadow: 0 0 5px gray;*/
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0 auto 30px;
+    min-height: 90vh;
+    max-height: fit-content;
+}
+
+.add-new-form{
+    width: 100%;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+}
+
+.add-new-form button{
+    width: 100%;
+    text-align: center;
+    color: rgb(7, 66, 124);
+    background-color: white;
+    height: 30px;
+}
+
+#add-new-group, #add-new-product{
+    width: 49%;
+}
+
+#add-new-group{
+    width: 49%;
+    background-color: rgb(7, 66, 124);
+    color: white;
+}
+
+.display-wrapper{
+    /*display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;*/
+    padding: 10px 0;
+}
+
+.display-wrapper input{
+    width: 25px;
+    box-sizing: border-box;
+    padding: 2px;
+    border: 1px solid lightgray;
+    border-radius: 2.5px;
+}
+
+.display-wrapper button{
+    color: rgb(7, 66, 124);
+    border: 1px solid lightgray;
+    background-color: white;
+    width: 100px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+/* #group-dropdown{
+    display: none;
+} */
+
+.group-display-wrapper{
+    /*group-display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;*/
+    padding: 10px 0;
+}
+
+.group-display-wrapper input{
+    width: 25px;
+    box-sizing: border-box;
+    padding: 2px;
+    border: 1px solid lightgray;
+    border-radius: 2.5px;
+}
+
+.group-display-wrapper button{
+    color: rgb(7, 66, 124);
+    border: 1px solid lightgray;
+    background-color: white;
+    width: 100px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+#first-quantity, #second-quantity, #third-quantity{
+    width: 40px;
+}
+
+.display-image{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.optional{
+    font-size: small;
+    color: tomato;
+    margin: 0 5px;
+}
+
+.product-input{
+    padding: 5px;
+    width: 150px;
+    border: 1px solid gray;
+    margin: 0;
+    resize: none;
+    height: 60px;
+    box-sizing: border-box;
+    border-radius: 2.5px 2.5px 0 2.5px;
+}
+
+#product-price{
+    width: 70px;
+    height: 30px;
+    border-radius: 0 2.5px 2.5px 0;
+}
+
+.button-wrapper{
+    width: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+#submit-product{
+    margin: 0 10px;
+    height: 30px;
+    width: 70px;
+    border-radius: 2.5px;
+}
+
+#more-prices{
+    margin: 0;
+    height: 30px;
+    width: fit-content;
+    color: rgb(7, 66, 124);
+    background-color: white;
+    border-radius: 2.5px;
+}
+
+.main-product-wrapper{
+    width: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.main-product-wrapper div{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.added-input, .group-added-input{
+    margin: 10px 0;
+}
+
+.group-added-input label{
+    font-size: small;
+    margin-right: 5px;
+}
+
+.group-added-input select{
+    font-size: small;
+    border: none;
+    padding: 5px;
+    margin-right: 5px;
+    background-color: lightgray;
+}
+
+.group-added-input span{
+    font-size: small;
+    color: tomato;
+}
+
+.added-input input, .group-added-input input{
+    padding: 5px;
+    width: 80px;
+    border: 1px solid gray;
+    margin: 0;
+    margin-right: 10px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 2.5px;
+}
+
+#quantity{
+    width: 50px;
+}
+
+.added-input button, .group-added-input button{
+    color: tomato;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    box-sizing: border-box;
+    padding: 0;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid tomato;
+}
+
+.upload-product, .display-wrapper, .group-upload-product, .group-display-wrapper{
+    display: none;
+}
+
+.products-container{
+    width: 100%;
+    min-height: 150px;
+    max-height: fit-content;
+    margin: 0;
+}
+
+.product-holder{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 2.5px gray;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 20px 0;
+}
+
+.product-main-details{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.product-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    border: 0.5px solid lightgray;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+p[id^="Product-Name"]{
+    padding: 2.5px;
+    display: flex;
+    flex-flow: row wrap;
+    width: fit-content;
+    max-width: calc(100% - 60px);
+    text-transform: capitalize;
+    position: relative;
+    padding-right: 20px;
+}
+
+.down-arrow-1::after{
+    content: '';
+    position: absolute;
+    border-width: 6px;
+    border-top-color: rgba(7, 66, 124, 0.7);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-style: solid;
+    top: calc(50% - 3px);
+    margin-left: 50px;
+    right: 0;
+}
+
+.up-arrow-1::after{
+    margin-left: 50px;
+    content: '';
+    position: absolute;
+    border-width: 6px;
+    border-bottom-color: rgba(7, 66, 124, 0.7);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-style: solid;
+    bottom: calc(50% - 3px);
+    right: 0;
+}
+
+.product-details p{
+    font-size: small;
+}
+
+img[id^="down-arrow-"]{
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    transform: rotateZ(180deg);
+}
+
+div[id^="edit-price-"]{
+    display: none;
+}
+
+div[id^="edit-price-"] form{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div[id^="edit-price-"] form input{
+    width: 65px;
+    height: 30px;
+    border: 1px solid lightgray;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 2.5px 0 0 2.5px;
+}
+
+div[id^="edit-price-"] form button{
+    width: fit-content;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 0 2.5px 2.5px 0;
+}
+
+form[class^="product-image-overlay"]{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.6);
+    position: relative;
+    visibility: hidden;
+}
+
+form[class^="product-image-overlay"] button{
+    color: rgb(7, 66, 124);
+    background-color: white;
+    border: 1px solid lightgray;
+    position: absolute;
+    top: 2.5px;
+    right: 2.5px;
+
+}
+
+.product-details{
+    margin: 0 10px;
+    height: 100px;
+    width: calc(100% - 100px);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+button[id^="show-discount"]{
+/* #show-discount{ */
+    color: rgb(7, 66, 124);
+    background-color: unset;
+    border: none;
+    border-top: 1px solid lightgray;
+    position: relative;
+}
+
+button[id^="hide-discount"]{
+    position: relative;
+    width: 100%;
+    height: 22.5px;
+    background-color: unset;
+    color: rgb(7, 66, 124);
+    border: none;
+    margin-top: 10px;
+    border-top: 1px solid lightgray;
+}
+
+button[id^="show-discount"] img, button[id^="hide-discount"] img{
+    width: 10px;
+    margin: 0 10px;
+}
+
+
+.down-arrow::after{
+    content: '';
+    position: absolute;
+    border-width: 6px;
+    border-top-color: rgba(7, 66, 124, 0.7);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-style: solid;
+    top: calc(50% - 3px);
+    margin-left: 10px;
+}
+
+.up-arrow::after{
+    margin-left: 10px;
+    content: '';
+    position: absolute;
+    border-width: 6px;
+    border-bottom-color: rgba(7, 66, 124, 0.7);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-style: solid;
+    bottom: calc(50% - 3px);
+}
+
+#hide-discount img{
+    transform: rotateZ(180deg);
+}
+
+#send-waybill{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+    color: seagreen;
+    /*color: seagreen;
+    color: rgb(7, 66, 124);
+    background-color: white;*/
+    background-color: seagreen;
+    background-color: white;
+    border: 1px solid rgb(7, 66, 124);
+    border: none;
+    border: 1px solid gray;
+    box-shadow: 0 0 2.5px gray;
+}
+
+.dropdown-product{
+    padding: 0;
+    width: 100%;
+    height: fit-content;
+    display: none;
+}
+
+.discount-list{
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 2.75px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+.discount-list input{
+    width: 70px;
+    padding: 5px;
+    height: 30px;
+    box-sizing: border-box;
+    border: none;
+    background-color: whitesmoke;
+}
+
+.discount-list label{
+    margin: 0 5px;
+    font-size: small;
+}
+
+.discount-list button{
+    margin-left: 10px;
+    color: rgb(7, 66, 124);
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+.discount-list p{
+    padding: 5px;
+    font-size: small;
+}
+
+input[id^="qty"]{
+    width: 40px;
+}
+
+#delete-discount{
+    color: tomato;
+}
+
+button[id^="submit-discount-"]{
+    color: white;
+    background-color: rgb(7, 66, 124);
+    display: none;
+}
+
+.no-discount-notice{
+    width: 50%;
+    padding: 5px;
+    font-size: small;
+    color: tomato;
+    text-align: center;
+}
+
+#addmore-discount{
+    width: fit-content;
+    text-align: center;
+    margin: 0;
+}
+
+div[id^="hiding-"]{
+    display: none;
+}
+
+div[id^="hiding-"] form input{
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+#hidden-submit{
+    color: white;
+    background-color: rgb(7, 66, 124);
+}
+
+.waybill-dropdown{
+    display: none;
+}
+
+.default-notice{
+    color: tomato;
+    font-size: smaller;
+    margin: 0 10px;
+}
+
+.send-waybill-form{
+    padding: 10px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.send-waybill-form div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.send-waybill-form div label, .send-waybill-form label{
+    font-size: small;
+}
+
+.send-waybill-form div button{
+    width: 97.5px;
+    border-radius: 0 2.5px 2.5px 0;
+}
+
+.send-waybill-form div select{
+    height: 30px;
+    margin: 0 10px;
+    border: 1px solid lightgray;
+}
+
+#waybill-details{
+    resize: none;
+    border-radius: 2.5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+#waybill-qty{
+    padding: 5px;
+    width: 50px;
+    border: 1px solid lightgray;
+}
+
+.waybill-container{
+    margin: 0;
+}
+
+.waybill-holder{
+    width: 100%;
+    height: fit-content;
+    background-color: unset;
+    background-color: whitesmoke;
+    background-color: white;
+    border-radius: 2.5px;
+    box-shadow: 0 0 5px gray;
+    margin: 20px 0;
+}
+
+.waybill-sent-form{
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 10px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.waybill-sent-form label{
+    line-height: 30px;
+    font-size: small;
+    width: calc(100% - 100px);
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.waybill-sent-form span{
+    color: gray;
+    font-size: x-small;
+    font-size: .7em;
+    margin: 0 30px;
+    padding: 0;
+    line-height: 15px;
+}
+
+.waybill-sent-form button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/*#waybill-sent{*/
+input[id^="waybill-sent-"]{   
+    width: 35px;
+    padding: 5px;
+    border: none;
+    background-color: whitesmoke;
+    background-color: white;
+    text-align: center;
+    height: 30px;
+    box-sizing: border-box;
+    margin-right: 5px;
+}
+    
+button[id^="edit-waybill-"]{   
+    color: rgb(7, 66, 124);
+    background-color: white;
+}
+
+button[id^="submit-waybill-"]{   
+    display: none;
+}
+
+.time-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: small;
+    flex-flow: row-reverse nowrap;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.time-container div{
+    width: fit-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: smaller;
+    flex-flow: column nowrap;
+    color: gray;
+}
+
+.confirmation-notice{
+    width: 100%;
+    color: tomato;
+    text-align: center;
+    font-size: smaller;
+    margin-top: 10px;
+}
+
+.approve-waybill-form{
+    width: 100%;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.approve-waybill-form button{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: seagreen;
+    border: none;
+}
+
+#stock{
+    color: gray;
+    font-size: small;
+}
+
+
+.show-more-or-less{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse nowrap;
+    width: 100%;
+}
+
+.show-more-or-less button{
+    color: gray;
+    background-color: white;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 1px gray;
+}
+
+
+.table-container{
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+s{
+    text-decoration-style: double;
+}
+
+table{
+    border: 1px solid gray;
+    margin-right: 10px;
+}
+
+tr:nth-child(odd){
+    background-color: gainsboro;
+    border: 1px solid gray;
+}
+
+th{
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+td{
+    padding: 10px;
+    border: 1px solid gray;
+    text-transform: capitalize;
+}
+
+.empty-right, .empty-center{
+    border-right: none;
+}
+
+.empty-left, .empty-center{
+    border-left: none;
+}
+
+.print-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.print-container button{
+    padding: 15px 30px;
+    background-color: white;
+    border: 1px solid black;
+    border: 1px solid gray;
+    color: black;
+    /* box-shadow: 0 0 2.5px gray; */
+}
+
+.print-container button img{
+    width: 30px;
+}
+
+@media only screen and (max-width: 768px){   
+    .waybill-div, .products-div, .stock-div,.error-notification, .success-notification, .error, .tab-container{
+        min-width: 90vw;
+    }    
+}
+
+@media only screen and (min-width: 768px){   
+    .waybill-div, .products-div, .stock-div,.error-notification, .success-notification, .error, .tab-container{
+        min-width: 80vw;
+    }
+}
+
+@media only screen and (min-width: 1024px){   
+    .waybill-div, .products-div, .stock-div,.error-notification, .success-notification, .error, .tab-container{
+        min-width: 60vw;
+    }
+}

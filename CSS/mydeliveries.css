@@ -1,0 +1,370 @@
+
+@font-face{
+    src: url(../fonts/Raleway-LightItalic.ttf);
+    font-family: roleway-li;
+}
+
+@font-face{
+    src: url(../fonts/Raleway-Bold.ttf);
+    font-family: roleway-b;
+}
+
+@font-face{
+    src: url(../fonts/Raleway-BoldItalic.ttf);
+    font-family: roleway-bi;
+}
+
+.success-notification, .error-notification, .error, .default-expression{
+    width: 40%;
+    min-width: 300px;
+    min-height: 40px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    border: 1px groove seagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    box-shadow: 0 0 5px seagreen;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    font-size: small;
+}
+
+.error-notification, .error{
+    background-color: pink;
+    border: 1px groove tomato;
+    box-shadow: 0 0 5px pink;
+    color: black;
+}
+
+
+.date-heading{
+    width: fit-content;
+    color: rgb(7, 66, 124);
+    background-color: lightgray;
+    text-align: center;
+    padding: 7.5px;
+    margin: 0 auto 10px;
+    border-radius: 12.5px;
+    font-size: small;
+}
+
+.default-expression{
+    width: calc(100% - 5px);
+    background-color: lightblue;
+    border: 1px groove rgb(7, 66, 124);
+    box-shadow: 0 0 5px rgb(7, 66, 124);
+    box-shadow: none;
+    color: rgb(7, 66, 124);
+    margin: 20px auto;
+}
+
+.mydeliveries-div{
+    display: flex;
+    width: 40%;
+    min-width: 300px;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 5px;
+    /*box-shadow: 0 0 5px gray;*/
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    padding: 10px 10px 20px;
+    margin: 10px auto;  
+    min-height: 90vh;
+    max-height: fit-content;
+    margin-bottom: 30px;
+}
+
+
+.orders-container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0 0 10px;
+}
+
+.orders-holder{
+    width: 100%;
+    max-height: fit-content;
+    min-height: 100px;
+    box-shadow: 0 0 5px gray;
+    background-color: unset;
+    background-color: whitesmoke;
+    background-color: white;
+    border-radius: 2.5px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+}
+
+#take-form{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: fit-content;
+    height: 30px;
+}
+
+#take-form button{
+    height: 100%;
+}
+
+.orders-holder span{
+    font-size: small;
+    max-width: calc(100% - 50px);
+}
+
+#merchant-span{
+    max-width: 100%;
+}
+
+.orders-holder p{
+    font-size: smaller;
+    color: gray;
+    padding: 10px 0;
+}
+
+#order-edit-form{
+    display: flex;
+    flex-flow: row nowarp;
+    width: 100%;
+    height: 30px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#edit-order, #delete-order{
+    background-color: white;
+    border: 1px solid lightgray;
+    color: rgb(7, 66, 124);
+    margin-right: 10px;
+}
+
+#delete-order{
+    color: tomato;
+}
+
+.order-footer{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse nowrap;
+    margin-top: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.order-footer p{
+    font-size: 0.7em;
+    padding: 0;
+}
+
+s{
+    text-decoration-style: double;
+}
+
+#contact-false{
+    color: tomato;
+    font-family: roleway-bi;
+}
+
+#contact-true{
+    color: rgb(7, 66, 124);
+    font-family: roleway-bi;
+}
+
+#contact-rescheduled{
+    color: orange;
+    font-family: roleway-bi;
+}
+
+#contact-delivered{
+    color: seagreen;
+    font-family: roleway-bi;
+}
+
+.order-buttons{
+    display: flex;
+    flex-flow: row nowarp;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-evenly;
+}
+
+.order-buttons button{
+    background-color: white;
+    border: 1px solid lightgray;
+    color: rgb(7, 66, 124);
+    /*box-shadow: 0 0 3px gray;*/
+}
+
+#feedback-order{
+    color: rgb(7, 66, 124);
+    border: 1px solid rgb(7, 66, 124);
+    border: none;
+    border: 1px solid lightgray;
+}
+
+#rescheduled-order{
+    color: gold;
+    color: goldenrod;
+    color: orange;
+    border: 1px solid goldenrod;
+    border: 1px solid orange;
+    border: none;
+    border: 1px solid lightgray;
+}
+
+#deliver-order{
+    color: seagreen;
+    background-color: seagreen;
+    color: white;
+    border: 1px solid tomato;
+    border: none;
+    border: 1px solid lightgray;
+    border: 1px solid seagreen;
+}
+
+#cancel-order{
+    color: tomato;
+    border: 1px solid tomato;
+    border: none;
+    border: 1px solid lightgray;
+}
+
+.order-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 5px 0;
+    margin-top: -10px;
+}
+
+.indicator-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 0.7em;
+    color: gray;
+    font-family: roleway-li;
+}
+
+#Pending, #Rescheduled, #Canceled, #Delivered, #Taken{
+    width: 15px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+span[id^="feedback-time"]{
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    font-size: 0.7em;
+    color: black;
+    color: rgb(7, 66, 124);
+    font-family: roleway-i;
+}
+
+div[class^="comment-wrapper"]{
+    position: relative; 
+    padding-bottom: 15px;
+    margin: 10px 0;
+}
+
+
+
+#Rescheduled{
+    background-color: orange;
+}
+
+#Canceled{
+    background-color: tomato;
+}
+
+#Delivered{
+    background-color: seagreen;
+}
+
+#Taken{
+    background-color: rgb(7, 66, 124);
+}
+
+.feedback-form{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+}
+
+.enter-feedback{
+    border-radius: 0 2.5px 2.5px 0;
+    margin-right: 20px;
+}
+
+.close-feedback{
+    color: tomato;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+textarea[id^="delivery-textarea-"]{
+    border-radius: 2.5px 0 0 2.5px;
+    padding: 5px;
+    resize: none;
+}
+
+div[class^="delivery-wrapper-"]{
+    display: none;
+}
+
+input[id^="reschedule-date-"]{
+    height: 27.5px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 2.5px 0 0 2.5px;
+}
+
+
+.show-more-or-less{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse nowrap;
+    width: 100%;
+}
+
+.show-more-or-less button{
+    color: gray;
+    background-color: white;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 1px gray;
+}
+
+@media only screen and (max-width: 768px){   
+    .mydeliveries-div, .error-notification, .success-notification, .error{
+        min-width: 90vw;
+    }
+    
+}
+
+@media only screen and (min-width: 768px){   
+    .mydeliveries-div, .error-notification, .success-notification, .error{
+        min-width: 80vw;
+    }
+    
+}
+
+@media only screen and (min-width: 1024px){   
+    .mydeliveries-div, .error-notification, .success-notification, .error{
+        min-width: 60vw;
+    }
+    
+}

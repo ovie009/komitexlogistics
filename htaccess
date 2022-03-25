@@ -1,0 +1,20 @@
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:komitexlogistics.tech
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} (www\.)?komitexlogistics.tech
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:komitexlogistics.tech
+
+# does not apply to existing directories, meaning that if the folder exists on the server then don't change anything and don't run thr rule!
+
+RewriteCond %{REQUEST_FILENAME}  !-directories
+
+# Check for file in directory with .php extension
+
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+# Here we actually show the page that has .php extension
+
+RewriteRule ^(.*)$ $1.php [NC,L]
+

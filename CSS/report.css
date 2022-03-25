@@ -1,0 +1,209 @@
+.success-notification, .error-notification, .error, .default-expression{
+    width: 40%;
+    min-width: 300px;
+    min-height: 40px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    border: 1px groove seagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    box-shadow: 0 0 5px seagreen;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    font-size: small;
+}
+
+.default-expression{
+    width: calc(100% - 5px);
+    background-color: lightblue;
+    border: 1px groove rgb(7, 66, 124);
+    box-shadow: 0 0 5px rgb(7, 66, 124);
+    box-shadow: none;
+    color: rgb(7, 66, 124);
+    margin: 20px auto;
+    min-width: unset;
+}
+
+.time-difference{
+    text-transform: none;
+}
+
+.report-div{
+    display: flex;
+    width: 40%;
+    min-width: 300px;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 5px;
+    /*box-shadow: 0 0 5px gray;*/
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    padding: 10px 10px 20px;
+    margin: 10px auto;
+    min-height: 90vh;
+    max-height: fit-content;
+    margin-bottom: 30px;
+}
+
+.N-A{
+    color: red;
+}
+
+.table-container{
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.report-form{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 10px 0;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: small;
+}
+
+.report-form div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.report-form div input, .report-form div select{
+    margin: 0 5px;
+    border: none;
+    padding: 5px;
+}
+
+.print-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.print-container button{
+    padding: 15px 30px;
+    background-color: white;
+    border: 1px solid black;
+    border: 1px solid gray;
+    color: black;
+    /* box-shadow: 0 0 2.5px gray; */
+}
+
+.print-container button img{
+    width: 30px;
+}
+
+s{
+    text-decoration-style: double;
+}
+
+tr:nth-child(odd){
+    background-color: gainsboro;
+    border: 1px solid lightgray;
+}
+
+th{
+    padding: 10px;
+    border: 1px solid lightgray;
+}
+
+td{
+    padding: 10px;
+    border: 1px solid lightgray;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+table{
+    border: 1px solid gray;
+    margin-right: 10px;
+}
+
+.empty-right, .empty-center{
+    border-right: none;
+}
+
+.empty-left, .empty-center{
+    border-left: none;
+}
+
+@media only screen and (max-width: 768px){   
+    .report-div, .error-notification, .success-notification, .error{
+        min-width: 90vw;
+    }
+    
+}
+
+@media only screen and (min-width: 768px){   
+    .report-div, .error-notification, .success-notification, .error{
+        min-width: 80vw;
+    }
+    
+}
+
+@media only screen and (min-width: 1024px){   
+    .report-div, .error-notification, .success-notification, .error{
+        min-width: 60vw;
+    }
+    
+}
+
+@media print{
+    header, footer, button, img, h1:first-child{
+        display: none;
+    }
+
+    .report-div{
+        box-shadow: none;
+        width: 100vw;
+        padding-top: 0;
+        border: none;
+    }
+
+    .table-container{
+        overflow: none;
+        white-space: normal;
+        overflow: visible;
+        padding: 0;
+        font-size: small;
+        /* padding: 10px 0; */
+    }
+
+    main{
+        padding-top: 0;
+    }
+
+    .report-form{
+        flex-flow: row nowrap;
+        gap: 10px;
+        display: none;
+    }
+
+    .print-heading{
+        display: flex;
+    }
+
+    .print-heading img{
+        display: unset;
+    }
+
+    .print-heading img:first-child{
+        width: 150px;
+    }
+
+    .print-title{
+        display: block;
+    }
+
+}

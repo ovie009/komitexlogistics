@@ -1,0 +1,261 @@
+.success-notification, .error-notification, .error, .default-expression{
+    width: 40%;
+    min-width: 300px;
+    min-height: 40px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    border: 1px groove seagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    box-shadow: 0 0 5px seagreen;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    font-size: small;
+}
+
+.error-notification, .error{
+    background-color: pink;
+    border: 1px groove tomato;
+    box-shadow: 0 0 5px pink;
+    color: black;
+}
+
+.default-expression{
+    width: calc(100% - 5px);
+    background-color: lightblue;
+    border: 1px groove rgb(7, 66, 124);
+    box-shadow: 0 0 5px rgb(7, 66, 124);
+    box-shadow: none;
+    color: rgb(7, 66, 124);
+    margin: 20px auto;
+    min-width: unset;
+}
+
+.orders-div{
+    display: flex;
+    width: 40%;
+    min-width: 300px;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 5px;
+    /*box-shadow: 0 0 5px gray;*/
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    padding: 10px 10px 20px;
+    margin: 10px auto;
+    min-height: 90vh;
+    max-height: fit-content;
+    margin-bottom: 30px;
+}
+
+
+.add-new-form{
+    width: 100%;
+}
+
+.add-new-form button{
+    width: 100%;
+    text-align: center;
+    color: rgb(7, 66, 124);
+    background-color: white;
+    height: 30px;
+}
+
+.submit-order{
+    padding: 10px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.submit-order label{
+    font-size: small;
+}
+
+.submit-order textarea{
+    margin: 0;
+    border-radius: 2.5px;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.submit-order div{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: small;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0 0;
+}
+
+.unedited{
+    color: gray;
+}
+
+.submit-order div select{
+    border: none;
+    padding: 5px;
+    margin: 0 10px;
+    background-color: lightgray;
+}
+
+.drop-send-order{
+    display: none;
+}
+
+#order-quantity{
+    width: 50px;
+    padding: 5px;
+    margin: 0 10px;
+    border-radius: 2.5px;
+    border: 1px lightgray solid;
+}
+
+.not-avaliable{
+    color: tomato;
+    margin: 0 10px;
+}
+
+.n-a{
+    color: tomato;
+}
+
+.orders-container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 20px 0;
+}
+
+.orders-holder{
+    width: 100%;
+    max-height: fit-content;
+    min-height: 100px;
+    box-shadow: 0 0 5px gray;
+    background-color: unset;
+    background-color: whitesmoke;
+    background-color: white;
+    border-radius: 2.5px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.orders-holder span{
+    font-size: small;
+}
+
+.orders-holder p{
+    font-size: smaller;
+    color: gray;
+    padding: 10px 0;
+}
+
+#order-edit-form{
+    display: flex;
+    flex-flow: row nowarp;
+    width: 100%;
+    height: 30px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#edit-order, #delete-order{
+    background-color: white;
+    border: 1px solid lightgray;
+    color: rgb(7, 66, 124);
+    margin-right: 10px;
+}
+
+#delete-order{
+    color: tomato;
+}
+
+.order-footer{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse nowrap;
+    margin-top: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.order-footer p{
+    font-size: 0.7em;
+    padding: 0;
+}
+
+s{
+    text-decoration-style: double;
+}
+
+.show-more-or-less{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse nowrap;
+    width: 100%;
+}
+
+.show-more-or-less button{
+    color: gray;
+    background-color: white;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 1px gray;
+}
+
+#location-cost{
+    width: 60px;
+    padding: 5px 5px 5px 0;
+    /* border: 1px solid lightgray; */
+    border: none;
+    color: gray;
+}
+
+#product-cost{
+    width: 55px;
+    padding: 5px 5px 5px 0;
+    /* border: 1px solid lightgray; */
+    border: none;
+    color: gray;
+}
+
+#check-edit{
+    color: gray;
+    padding: 5px 0;
+}
+
+#edit-price{
+    margin-right: 0;
+}
+
+@media only screen and (max-width: 768px){   
+    .orders-div, .error-notification, .success-notification, .error{
+        min-width: 90vw;
+    }
+    
+}
+
+@media only screen and (min-width: 768px){   
+    .orders-div, .error-notification, .success-notification, .error{
+        min-width: 80vw;
+    }
+    
+}
+
+@media only screen and (min-width: 1024px){   
+    .orders-div, .error-notification, .success-notification, .error{
+        min-width: 60vw;
+    }
+    
+}

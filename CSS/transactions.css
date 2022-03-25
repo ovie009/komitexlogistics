@@ -1,0 +1,66 @@
+.success-notification, .error-notification, .error, .default-expression{
+    width: 40%;
+    min-width: 300px;
+    min-height: 40px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    border: 1px groove seagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    box-shadow: 0 0 5px seagreen;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    font-size: small;
+}
+
+.default-expression{
+    width: calc(100% - 5px);
+    background-color: lightblue;
+    border: 1px groove rgb(7, 66, 124);
+    box-shadow: 0 0 5px rgb(7, 66, 124);
+    box-shadow: none;
+    color: rgb(7, 66, 124);
+    margin: 20px auto;
+    min-width: unset;
+}
+
+.transactions-div{
+    display: flex;
+    width: 40%;
+    min-width: 300px;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 5px;
+    /*box-shadow: 0 0 5px gray;*/
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    padding: 10px 10px 20px;
+    margin: 10px auto;
+    min-height: 90vh;
+    max-height: fit-content;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px){   
+    .transactions-div, .error-notification, .success-notification, .error{
+        min-width: 90vw;
+    }
+    
+}
+
+@media only screen and (min-width: 768px){   
+    .transactions-div, .error-notification, .success-notification, .error{
+        min-width: 80vw;
+    }
+    
+}
+
+@media only screen and (min-width: 1024px){   
+    .transactions-div, .error-notification, .success-notification, .error{
+        min-width: 60vw;
+    }
+    
+}
